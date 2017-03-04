@@ -1,5 +1,5 @@
 # generator-bem-blocks [![NPM version][npm-image]][npm-url] [![Build Status](https://travis-ci.org/lamartire/generator-bem-blocks.svg?branch=master)](https://travis-ci.org/lamartire/generator-bem-blocks)
-<!--[![Coverage percentage][coveralls-image]][coveralls-url]-->
+[![Coverage Status](https://coveralls.io/repos/github/lamartire/generator-bem-blocks/badge.svg?branch=master)](https://coveralls.io/github/lamartire/generator-bem-blocks?branch=master)
 >
 
 ## Installation
