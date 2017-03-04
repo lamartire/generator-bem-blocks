@@ -17,17 +17,17 @@ module.exports = Generator.extend({
     var prompts = [{
       type: 'input',
       name: 'blockPath',
-      message: 'Укажите путь до директории, где будет создан блок:',
+      message: 'Specify the path to the directory where the block will be created:',
       default: '.'
     }, {
       type: 'input',
       name: 'blockName',
-      message: 'Введите имя блока:',
+      message: 'Enter block name:',
       default: 'block'
     }, {
       type: 'list',
       name: 'markup',
-      message: 'Выберите расширение для файла разметки:',
+      message: 'Choose markup file extension:',
       choices: [
         'jsx', 'pug', 'pug bem-to', 'html'
       ],
@@ -35,7 +35,7 @@ module.exports = Generator.extend({
     }, {
       type: 'list',
       name: 'style',
-      message: 'Выберите расширение для файла стилей:',
+      message: 'Choose style file extension:',
       choices: [
         'styl', 'css', 'less', 'sass', 'scss', 'sss'
       ],

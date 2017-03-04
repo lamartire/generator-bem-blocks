@@ -1,5 +1,5 @@
 # generator-bem-blocks [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> 
+>
 
 ## Installation
 
@@ -10,18 +10,34 @@ npm install -g yo
 npm install -g generator-bem-blocks
 ```
 
-Then generate your new project:
+## Usage
+
+This is really easiest way to generate bem blocks.
 
 ```bash
 yo bem-blocks
 ```
 
-## Getting To Know Yeoman
+Basic structure of generated block:
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+```
+blockName/
+  ├──blockName.markupExtension
+  └──blockName.styleExtension
+```
+
+## Supported extensions
+
+| **Markup** | **Style** |
+|------------|-----------|
+|`jsx`|`styl`|
+|`pug`|`css`|
+|`pug bem-to`|`sass`|
+|`html`|`scss`|
+|~|`less`|
+|~|`sss`|
+
+Also, with `jsx` block it creates `index.jsx` to more comfortable import.
 
 ## License
 
