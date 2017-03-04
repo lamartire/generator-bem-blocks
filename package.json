@@ -13,7 +13,8 @@
   ],
   "main": "generators/index.js",
   "keywords": [
-    "",
+    "bem",
+    "blocks",
     "yeoman-generator"
   ],
   "dependencies": {
