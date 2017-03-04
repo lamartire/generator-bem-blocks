@@ -1,0 +1,46 @@
+{
+  "markup": {
+    "pug": {
+      "input": "pug",
+      "output": "pug"
+    },
+    "pug bem-to": {
+      "input": "bemto.pug",
+      "output": "pug"
+    },
+    "html": {
+      "input": "html",
+      "output": "html"
+    },
+    "jsx": {
+      "input": "jsx",
+      "output": "jsx"
+    }
+  },
+  "style": {
+    "styl": {
+      "input": "styl",
+      "output": "styl"
+    },
+    "css": {
+      "input": "css",
+      "output": "css"
+    },
+    "less": {
+      "input": "less",
+      "output": "less"
+    },
+    "sass": {
+      "input": "sass",
+      "output": "sass"
+    },
+    "scss": {
+      "input": "scss",
+      "output": "scss"
+    },
+    "sss": {
+      "input": "sss",
+      "output": "sss"
+    }
+  }
+}

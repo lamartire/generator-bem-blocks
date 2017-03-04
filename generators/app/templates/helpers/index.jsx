@@ -1,0 +1,5 @@
+'use strict';
+
+import <%= blockName %> from './<%= blockName %>';
+
+export default <%= blockName %>;
