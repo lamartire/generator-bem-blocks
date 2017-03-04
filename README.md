@@ -1,4 +1,5 @@
-# generator-bem-blocks [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-bem-blocks [![NPM version][npm-image]][npm-url] [![Build Status][https://travis-ci.org/lamartire/generator-bem-blocks.svg]][https://travis-ci.org/lamartire/generator-bem-blocks]
+<!--[![Coverage percentage][coveralls-image]][coveralls-url]-->
 >
 
 ## Installation
