@@ -1,12 +1,12 @@
 {
   "name": "generator-bem-blocks",
-  "version": "0.0.0",
-  "description": "",
-  "homepage": "",
+  "version": "0.0.1",
+  "description": "Easiest way to create new blocks :watermelon:",
+  "homepage": "https://github.com/lamartire/generator-bem-blocks",
   "author": {
     "name": "lamartire",
     "email": "lamartire@gmail.com",
-    "url": ""
+    "url": "darkened.space"
   },
   "files": [
     "generators"
@@ -43,7 +43,7 @@
       "mocha": true
     }
   },
-  "repository": "lamartire/generator-bem-blocks",
+  "repository": "https://github.com/lamartire/generator-bem-blocks",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
