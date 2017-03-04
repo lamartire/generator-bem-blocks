@@ -18,7 +18,7 @@ module.exports = Generator.extend({
       type: 'input',
       name: 'blockPath',
       message: 'Укажите путь до директории, где будет создан блок:',
-      default: path.resolve(__dirname)
+      default: '.'
     }, {
       type: 'input',
       name: 'blockName',
