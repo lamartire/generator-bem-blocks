@@ -3,7 +3,6 @@
 var Generator = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
-var path = require('path');
 var fs = require('fs');
 var templatesMap = require('./templatesMap');
 
