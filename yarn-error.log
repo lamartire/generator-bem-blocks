@@ -1,35 +1,36 @@
-Arguments:
-  /usr/bin/nodejs /usr/bin/yarn add -D ejs
+Arguments: 
+  /usr/bin/nodejs /usr/bin/yarn add -D pre-commit
 
-PATH:
-  /home/kot/bin:/home/kot/.local/bin:/home/kot/bin:/home/kot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+PATH: 
+  /home/kot/.rbenv/plugins/ruby-build/bin:/home/kot/.rbenv/shims:/home/kot/.rbenv/bin:/home/kot/bin:/home/kot/.local/bin:/home/kot/.rbenv/plugins/ruby-build/bin:/home/kot/.rbenv/shims:/home/kot/.rbenv/bin:/home/kot/bin:/home/kot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
 
-Yarn version:
+Yarn version: 
   0.21.3
 
-Node version:
+Node version: 
   7.6.0
 
-Platform:
+Platform: 
   linux x64
 
-npm manifest:
+npm manifest: 
   {
     "name": "generator-bem-blocks",
-    "version": "0.0.0",
-    "description": "",
-    "homepage": "",
+    "version": "0.0.6",
+    "description": "Easiest way to create new blocks :watermelon:",
+    "homepage": "https://github.com/lamartire/generator-bem-blocks",
     "author": {
       "name": "lamartire",
       "email": "lamartire@gmail.com",
-      "url": ""
+      "url": "darkened.space"
     },
     "files": [
       "generators"
     ],
     "main": "generators/index.js",
     "keywords": [
-      "",
+      "bem",
+      "blocks",
       "yeoman-generator"
     ],
     "dependencies": {
@@ -38,19 +39,19 @@ npm manifest:
       "yosay": "^1.2.1"
     },
     "devDependencies": {
-      "yeoman-test": "^1.6.0",
-      "yeoman-assert": "^2.2.1",
       "eslint": "^3.1.1",
       "eslint-config-xo-space": "^0.15.0",
       "gulp": "^3.9.0",
+      "gulp-coveralls": "^0.1.0",
       "gulp-eslint": "^3.0.1",
       "gulp-exclude-gitignore": "^1.0.0",
-      "gulp-line-ending-corrector": "^1.0.1",
       "gulp-istanbul": "^1.0.0",
+      "gulp-line-ending-corrector": "^1.0.1",
       "gulp-mocha": "^3.0.1",
-      "gulp-plumber": "^1.0.0",
       "gulp-nsp": "^2.1.0",
-      "gulp-coveralls": "^0.1.0"
+      "gulp-plumber": "^1.0.0",
+      "yeoman-assert": "^2.2.1",
+      "yeoman-test": "^1.6.0"
     },
     "eslintConfig": {
       "extends": "xo-space",
@@ -58,7 +59,7 @@ npm manifest:
         "mocha": true
       }
     },
-    "repository": "lamartire/generator-bem-blocks",
+    "repository": "https://github.com/lamartire/generator-bem-blocks",
     "scripts": {
       "prepublish": "gulp prepublish",
       "test": "gulp"
@@ -66,11 +67,11 @@ npm manifest:
     "license": "MIT"
   }
 
-yarn manifest:
+yarn manifest: 
   No manifest
 
-Lockfile:
+Lockfile: 
   No lockfile
 
-Trace:
+Trace: 
   Error: EACCES: permission denied, scandir '/home/kot/.cache/yarn/npm-tmp-0.0.29-f25125ff0dd9da3ccb0c2dd371ee1288bb9128c0/x'
