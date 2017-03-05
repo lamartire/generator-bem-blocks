@@ -1,12 +1,11 @@
 # generator-bem-blocks [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url]
 >
 
+[This docs on Russian](https://github.com/lamartire/generator-bem-blocks/blob/master/README_RU.md).
+
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-bem-blocks using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
-
 ```bash
-npm install -g yo
 npm install -g generator-bem-blocks
 ```
 
@@ -38,6 +37,8 @@ blockName/
 |~|`sss`|
 
 Also, with `jsx` block it creates `index.jsx` to more comfortable import.
+
+Stay BEMed!
 
 ## License
 
