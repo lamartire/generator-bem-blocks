@@ -1,5 +1,4 @@
-# generator-bem-blocks [![NPM version][npm-image]][npm-url] [![Build Status](https://travis-ci.org/lamartire/generator-bem-blocks.svg?branch=master)](https://travis-ci.org/lamartire/generator-bem-blocks)
-[![Coverage Status](https://coveralls.io/repos/github/lamartire/generator-bem-blocks/badge.svg?branch=master)](https://coveralls.io/github/lamartire/generator-bem-blocks?branch=master)
+# generator-bem-blocks [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url]
 >
 
 ## Installation
@@ -49,7 +48,5 @@ MIT © [lamartire]()
 [npm-url]: https://npmjs.org/package/generator-bem-blocks
 [travis-image]: https://travis-ci.org/lamartire/generator-bem-blocks.svg?branch=master
 [travis-url]: https://travis-ci.org/lamartire/generator-bem-blocks
-[daviddm-image]: https://david-dm.org/lamartire/generator-bem-blocks.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/lamartire/generator-bem-blocks
 [coveralls-image]: https://coveralls.io/repos/lamartire/generator-bem-blocks/badge.svg
 [coveralls-url]: https://coveralls.io/r/lamartire/generator-bem-blocks
