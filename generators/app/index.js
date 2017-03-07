@@ -8,36 +8,30 @@ var templatesMap = require('./templatesMap');
 
 module.exports = Generator.extend({
   prompting: function () {
-    // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the posh ' + chalk.red('generator-bem-blocks') + ' generator!'
+      `Welcome to the posh ${chalk.green('generator-bem-blocks')} generator!`
     ));
-
     var prompts = [{
       type: 'input',
-      name: 'blockPath',
-      message: 'Specify the path to the directory where the block will be created:',
+      name: 'blocksPath',
+      message: 'Specify the path to the directory where the blocks will be created:',
       default: '.'
     }, {
       type: 'input',
-      name: 'blockName',
-      message: 'Enter block name:',
+      name: 'blocksNames',
+      message: 'Enter blocks names (separated by spaces):',
       default: 'block'
     }, {
       type: 'list',
       name: 'markup',
       message: 'Choose markup file extension:',
-      choices: [
-        'jsx', 'pug', 'pug bem-to', 'html'
-      ],
+      choices: Object.keys(templatesMap.markup),
       default: 0
     }, {
       type: 'list',
       name: 'style',
       message: 'Choose style file extension:',
-      choices: [
-        'styl', 'css', 'less', 'sass', 'scss', 'sss'
-      ],
+      choices: Object.keys(templatesMap.style),
       default: 0
     }];
 
@@ -56,38 +50,36 @@ module.exports = Generator.extend({
       extension: this.props.style
     }];
 
-    choosenTemplates.map(template => {
-      try {
-        fs.readdirSync(this.props.blockPath);
-      } catch (err) {
-        if (err.code === 'ENOENT') {
-          fs.mkdirSync(this.props.blockPath);
+    this.props.blocksNames.split(' ').map(blockName => {
+      return choosenTemplates.map(template => {
+        try {
+          fs.readdirSync(this.props.blocksPath);
+        } catch (err) {
+          if (err.code === 'ENOENT') {
+            fs.mkdirSync(this.props.blocksPath);
+          }
         }
-      }
 
-      var templateData = {
-        blockName: this.props.blockName
-      };
-      var inputExtension = templatesMap[template.type][template.extension].input;
-      var outputExtension = templatesMap[template.type][template.extension].output;
+        var templateData = {
+          blockName: blockName
+        };
+        var inputExtension = templatesMap[template.type][template.extension].input;
+        var outputExtension = templatesMap[template.type][template.extension].output;
 
-      if (outputExtension === 'jsx') {
-        this.fs.copyTpl(
-          this.templatePath('helpers/index.jsx'),
-          this.destinationPath(`${this.props.blockPath}/${this.props.blockName}/index.jsx`),
+        if (outputExtension === 'jsx') {
+          this.fs.copyTpl(
+            this.templatePath('helpers/index.jsx'),
+            this.destinationPath(`${this.props.blocksPath}/${blockName}/index.jsx`),
+            templateData
+          );
+        }
+
+        return this.fs.copyTpl(
+          this.templatePath(`${template.type}/block.${inputExtension}`),
+          this.destinationPath(`${this.props.blocksPath}/${blockName}/${blockName}.${outputExtension}`),
           templateData
         );
-      }
-
-      return this.fs.copyTpl(
-        this.templatePath(`${template.type}/block.${inputExtension}`),
-        this.destinationPath(`${this.props.blockPath}/${this.props.blockName}/${this.props.blockName}.${outputExtension}`),
-        templateData
-      );
+      });
     });
   }
-
-  // install: function () {
-  //   this.installDependencies();
-  // }
 });

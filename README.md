@@ -1,6 +1,8 @@
 # generator-bem-blocks [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url]
 >
 
+![generator-bem-blocks](http://i.imgur.com/j7BMJeX.gif)
+
 [This docs on Russian](https://github.com/lamartire/generator-bem-blocks/blob/master/README_RU.md).
 
 ## Installation
@@ -15,6 +17,12 @@ This is really easiest way to generate bem blocks.
 
 ```bash
 yo bem-blocks
+```
+
+You can create multiple blocks.
+
+```
+Block1 Block2 Block3
 ```
 
 Basic structure of generated block:
