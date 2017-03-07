@@ -1,6 +1,8 @@
 # generator-bem-blocks [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url]
 >
 
+![generator-bem-blocks](http://i.imgur.com/j7BMJeX.gif)
+
 [Эта документация на Английском](https://github.com/lamartire/generator-bem-blocks/blob/master/README_RU.md).
 
 ## Установка

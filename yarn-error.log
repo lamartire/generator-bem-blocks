@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/nodejs /usr/bin/yarn add -D pre-commit
+  /usr/bin/nodejs /usr/bin/yarn install
 
 PATH: 
   /home/kot/.rbenv/plugins/ruby-build/bin:/home/kot/.rbenv/shims:/home/kot/.rbenv/bin:/home/kot/bin:/home/kot/.local/bin:/home/kot/.rbenv/plugins/ruby-build/bin:/home/kot/.rbenv/shims:/home/kot/.rbenv/bin:/home/kot/bin:/home/kot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
@@ -62,8 +62,12 @@ npm manifest:
     "repository": "https://github.com/lamartire/generator-bem-blocks",
     "scripts": {
       "prepublish": "gulp prepublish",
-      "test": "gulp"
+      "test": "gulp",
+      "lint": "eslint *.js"
     },
+    "pre-commit": [
+      "lint"
+    ],
     "license": "MIT"
   }
 
