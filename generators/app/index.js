@@ -8,11 +8,9 @@ var templatesMap = require('./templatesMap');
 
 module.exports = Generator.extend({
   prompting: function () {
-    // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the posh ' + chalk.red('generator-bem-blocks') + ' generator!'
+      `Welcome to the posh ${chalk.green('generator-bem-blocks')} generator!`
     ));
-
     var prompts = [{
       type: 'input',
       name: 'blockPath',
@@ -27,17 +25,13 @@ module.exports = Generator.extend({
       type: 'list',
       name: 'markup',
       message: 'Choose markup file extension:',
-      choices: [
-        'jsx', 'pug', 'pug bem-to', 'html'
-      ],
+      choices: Object.keys(templatesMap.markup),
       default: 0
     }, {
       type: 'list',
       name: 'style',
       message: 'Choose style file extension:',
-      choices: [
-        'styl', 'css', 'less', 'sass', 'scss', 'sss'
-      ],
+      choices: Object.keys(templatesMap.style),
       default: 0
     }];
 
@@ -86,8 +80,4 @@ module.exports = Generator.extend({
       );
     });
   }
-
-  // install: function () {
-  //   this.installDependencies();
-  // }
 });
