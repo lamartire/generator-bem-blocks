@@ -7,8 +7,8 @@ describe('generator-bem-blocks:pug+styl (common generation)', function () {
   before(function () {
     return helpers.run(path.join(__dirname, '../generators/app'))
       .withPrompts({
-        blockPath: 'test',
-        blockName: 'helloWorld',
+        blockPath: '.',
+        blocksNames: 'helloWorld',
         markup: 'pug',
         style: 'styl'
       })
@@ -17,9 +17,9 @@ describe('generator-bem-blocks:pug+styl (common generation)', function () {
 
   it('creates directory helloWorld with helloWorld.pug and helloWorld.styl files', function () {
     assert.file([
-      'test/helloWorld',
-      'test/helloWorld/helloWorld.pug',
-      'test/helloWorld/helloWorld.styl'
+      'helloWorld',
+      'helloWorld/helloWorld.pug',
+      'helloWorld/helloWorld.styl'
     ]);
   });
 });
@@ -28,8 +28,8 @@ describe('generator-bem-blocks:jsx+styl (common generation)', function () {
   before(function () {
     return helpers.run(path.join(__dirname, '../generators/app'))
       .withPrompts({
-        blockPath: 'test',
-        blockName: 'helloWorld',
+        blockPath: '.',
+        blocksNames: 'helloWorld',
         markup: 'jsx',
         style: 'styl'
       })
@@ -38,10 +38,10 @@ describe('generator-bem-blocks:jsx+styl (common generation)', function () {
 
   it('creates directory helloWorld with helloWorld.jsx, helloWorld.styl and index.jsx files', function () {
     assert.file([
-      'test/helloWorld',
-      'test/helloWorld/index.jsx',
-      'test/helloWorld/helloWorld.jsx',
-      'test/helloWorld/helloWorld.styl'
+      'helloWorld',
+      'helloWorld/index.jsx',
+      'helloWorld/helloWorld.jsx',
+      'helloWorld/helloWorld.styl'
     ]);
   });
 });
