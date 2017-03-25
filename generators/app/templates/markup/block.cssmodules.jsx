@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './<%= blockName %>.<%= stylesExtension %>';
 
 class <%= blockName %> extends React.Component {
   render() {
     return (
-      <div className='<%= blockName %>'>
+      <div className={ styles.<%= blockName %> }>
 
       </div>
     )

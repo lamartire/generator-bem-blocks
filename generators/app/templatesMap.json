@@ -1,5 +1,13 @@
 {
   "markup": {
+    "jsx": {
+      "input": "jsx",
+      "output": "jsx"
+    },
+    "jsx cssmodules": {
+      "input": "cssmodules.jsx",
+      "output": "jsx"
+    },
     "pug": {
       "input": "pug",
       "output": "pug"
@@ -11,10 +19,6 @@
     "html": {
       "input": "html",
       "output": "html"
-    },
-    "jsx": {
-      "input": "jsx",
-      "output": "jsx"
     }
   },
   "style": {
