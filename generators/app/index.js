@@ -42,41 +42,47 @@ module.exports = Generator.extend({
   },
 
   writing: function () {
+    var {markup, style, blocksPath, blocksNames} = this.props;
     var choosenTemplates = [{
       type: 'markup',
-      extension: this.props.markup
+      extension: markup
     }, {
       type: 'style',
-      extension: this.props.style
+      extension: style
     }];
 
-    this.props.blocksNames.split(' ').map(blockName => {
+    blocksNames.split(' ').map(blockName => {
       return choosenTemplates.map(template => {
+        var {type, extension} = template;
+
         try {
-          fs.readdirSync(this.props.blocksPath);
+          fs.readdirSync(blocksPath);
         } catch (err) {
           if (err.code === 'ENOENT') {
-            fs.mkdirSync(this.props.blocksPath);
+            fs.mkdirSync(blocksPath);
           }
         }
 
         var templateData = {
-          blockName: blockName
+          blockName: blockName,
+          stylesExtension: style
         };
-        var inputExtension = templatesMap[template.type][template.extension].input;
-        var outputExtension = templatesMap[template.type][template.extension].output;
+        var inputExtension = templatesMap[type][extension].input;
+        var outputExtension = templatesMap[type][extension].output;
 
         if (outputExtension === 'jsx') {
           this.fs.copyTpl(
             this.templatePath('helpers/index.jsx'),
-            this.destinationPath(`${this.props.blocksPath}/${blockName}/index.jsx`),
+            this.destinationPath(`${blocksPath}/${blockName}/index.jsx`),
             templateData
           );
         }
 
         return this.fs.copyTpl(
-          this.templatePath(`${template.type}/block.${inputExtension}`),
-          this.destinationPath(`${this.props.blocksPath}/${blockName}/${blockName}.${outputExtension}`),
+          this.templatePath(`${type}/block.${inputExtension}`),
+          this.destinationPath(
+            `${blocksPath}/${blockName}/${blockName}.${outputExtension}`
+          ),
           templateData
         );
       });
