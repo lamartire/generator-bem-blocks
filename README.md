@@ -3,7 +3,10 @@
 
 ![generator-bem-blocks](http://i.imgur.com/j7BMJeX.gif)
 
-[This docs on Russian](https://github.com/lamartire/generator-bem-blocks/blob/master/README_RU.md).
+## ⚠️ This project deprecated
+
+This project was deprecated since `0.1.2` version. Fork it if you need additional features,
+or use [hygen](http://github.com/jondot/hygen) for blazing fast components scaffolding.
 
 ## Installation
 
